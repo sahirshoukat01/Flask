@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies | Scraping Solution</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        header {
+            background: #101d36;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00c6ff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        section {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #101d36;
+            margin-bottom: 25px;
+            font-size: 35px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        .tech {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .tech span {
+            background: white;
+            padding: 20px 35px;
+            border-radius: 8px;
+            color: #174b78;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Scraping Solution</div>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('technology') }}">Technology</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h1>Technologies We Use</h1>
+
+    <p>
+        We use modern technologies and programming tools
+        to develop reliable digital solutions.
+    </p>
+
+    <div class="tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>Bootstrap</span>
+        <span>WordPress</span>
+        <span>Selenium</span>
+        <span>BeautifulSoup</span>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Scraping Solution. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Scraping Solution</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        header {
+            background: #101d36;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00c6ff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #101d36;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 140px;
+        }
+
+        button {
+            background: #00c6ff;
+            color: #101d36;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #174b78;
+            color: white;
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Scraping Solution</div>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('technology') }}">Technology</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section>
+
+    <h1>Contact Us</h1>
+
+    <p class="intro">
+        Have a project in mind? Contact our team today.
+    </p>
+
+    <form onsubmit="sendMessage(event)">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <input type="text" placeholder="Subject" required>
+
+        <textarea placeholder="Write Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Scraping Solution. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function sendMessage(event) {
+        event.preventDefault();
+        alert("Thank you for contacting Scraping Solution!");
+    }
+</script>
+
+</body>
+</html>
