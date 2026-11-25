@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraping Solution | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        header {
+            background: #101d36;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00c6ff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101d36, #174b78);
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #00c6ff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: #00c6ff;
+            color: #101d36;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 70px 10%;
+            line-height: 1.8;
+        }
+
+        .welcome h2 {
+            color: #101d36;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Scraping Solution</div>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('technology') }}">Technology</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to <span>Scraping Solution</span></h1>
+
+    <p>
+        Smart Technology. Powerful Solutions.<br>
+        We build digital solutions to help businesses grow.
+    </p>
+
+    <a href="{{ url_for('services') }}" class="btn">
+        Explore Our Services
+    </a>
+</section>
+
+<section class="welcome">
+    <h2>Welcome to Our Company</h2>
+
+    <p>
+        Scraping Solution is a software house focused on
+        web development, web scraping, automation and
+        innovative technology solutions.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Scraping Solution. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

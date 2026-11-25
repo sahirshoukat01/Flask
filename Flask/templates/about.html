@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Scraping Solution</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        header {
+            background: #101d36;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00c6ff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00c6ff;
+        }
+
+        section {
+            padding: 90px 10%;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        h1 {
+            color: #101d36;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #174b78;
+            margin: 25px 0 10px;
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Scraping Solution</div>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('technology') }}">Technology</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h1>About Scraping Solution</h1>
+
+    <p>
+        Scraping Solution is a technology company providing
+        modern software and digital services.
+
+        We focus on developing websites, collecting and
+        managing data, and automating business processes.
+    </p>
+
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to provide reliable and innovative
+        technology solutions that help businesses achieve
+        their goals.
+    </p>
+
+    <h2>Our Vision</h2>
+
+    <p>
+        Our vision is to become a trusted technology partner
+        by delivering quality digital services.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Scraping Solution. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
